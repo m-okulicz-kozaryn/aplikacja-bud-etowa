@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="main.js"></script>
+
+    <title>Projekt domowy budżet</title>
+  </head>
+  <body>
+    <div class="money">
+      <div class="funny_money">
+        <div id="money_to_spent"></div>
+        <div class="income">
+          <p id="hard_work">PRZYCHODY</p>
+          <br />
+          <input
+            type="text"
+            id="income"
+            maxlength="30"
+            placeholder="Nazwa przychodu"
+          />
+          <input
+            type="number"
+            id="cash"
+            onkeyup="if(this.value<0){this.value= this.value * -1}"
+            placeholder="Kwota"
+          />
+          <button id="addButton">Dodaj</button>
+          <div class="income_details">
+            <ul id="incomeList"></ul>
+          </div>
+        </div>
+
+        <p id="incomeSum"></p>
+        <div id="costs_to_cover">
+          <p id="easy_go">WYDATKI</p>
+          <br />
+          <input
+            type="text"
+            id="costsPosition"
+            maxlength="30"
+            placeholder="Nazwa wydatku"
+          />
+          <input
+            type="number"
+            id="expenses"
+            onkeyup="if(this.value<0){this.value= this.value * -1}"
+            placeholder="Kwota"
+          />
+          <button id="costsButton">Dodaj</button>
+          <div class="costs_details">
+            <ul id="costs_list"></ul>
+          </div>
+        </div>
+        <p id="costsSum"></p>
+      </div>
+    </div>
+  </body>
+</html>
